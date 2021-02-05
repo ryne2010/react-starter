@@ -3,10 +3,10 @@ import React from 'react';
 import MovieListEntry from './MovieListEntry.js';
 
 // COMPONENT
-var MovieList = (props) => (
+var MovieList = ({movies, handleWatchedStatus}) => (
   <div className="movie-list">
-    {props.movies.map(movie =>
-      <MovieListEntry movie={movie} />
+    {movies.map(movie =>
+      <MovieListEntry movie={movie} handleWatchedStatus={handleWatchedStatus} />
     )}
   </div>
 );
